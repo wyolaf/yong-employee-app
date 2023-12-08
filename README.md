@@ -6,3 +6,4 @@
 ##### 集成springsecurity
 ##### 分页使用的是pagehelper
 ##### 接口校验使用Validate
+##### swagger访问地址：http://localhost:8086/employee/swagger-ui.html
