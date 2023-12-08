@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yong.employee.mapper.SysUserMapper">
+  <resultMap id="BaseResultMap" type="com.yong.employee.model.po.SysUserPO">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="realname" jdbcType="VARCHAR" property="realname" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="createDate" jdbcType="DATE" property="createdate" />
+    <result column="lastLoginTime" jdbcType="DATE" property="lastlogintime" />
+    <result column="enabled" jdbcType="INTEGER" property="enabled" />
+    <result column="accountNonExpired" jdbcType="INTEGER" property="accountnonexpired" />
+    <result column="accountNonLocked" jdbcType="INTEGER" property="accountnonlocked" />
+    <result column="credentialsNonExpired" jdbcType="INTEGER" property="credentialsnonexpired" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, username, realname, password, createDate, lastLoginTime, enabled, accountNonExpired, 
+    accountNonLocked, credentialsNonExpired
+  </sql>
+
+</mapper>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yong.employee.mapper.EmployeeMapper">
+  <resultMap id="BaseResultMap" type="com.yong.employee.model.po.EmployeePO">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="emp_name" jdbcType="VARCHAR" property="empName" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="dept_name" jdbcType="VARCHAR" property="deptName" />
+    <result column="emp_degree_name" jdbcType="VARCHAR" property="empDegreeName" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, emp_name, sex, age, dept_name, emp_degree_name
+  </sql>
+
+  <select id="page" parameterType="com.yong.employee.model.vo.EmployeeReqVO" resultMap="BaseResultMap">
+    select
+        <include refid="Base_Column_List"/>
+    FROM employee
+    <where>
+      <if test="empName != null and empName != ''">
+        and `emp_name` like CONCAT('%',#{empName},'%')
+      </if>
+      <if test="deptName != null and deptName != ''">
+        and `dept_name` = #{deptName}
+      </if>
+      <if test="empDegreeName != null and empDegreeName != ''">
+        and `emp_degree_name` = #{empDegreeName}
+      </if>
+    </where>
+    ORDER BY id asc
+  </select>
+</mapper>
