@@ -8,7 +8,7 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-12-08T11:03:17+0800",
+    date = "2023-12-08T12:26:08+0800",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 1.8.0_231 (Oracle Corporation)"
 )
 public class EmployeeConvertImpl implements EmployeeConvert {

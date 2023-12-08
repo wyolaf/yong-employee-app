@@ -3,6 +3,7 @@ package com.yong.employee.controller;
 
 import com.yong.employee.model.dto.LoginUserInfo;
 import com.yong.employee.service.ISysUserService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 import java.util.Map;
 
+@Api(value = "用户", tags = { "用户登录及信息查询" })
 @RestController
 @RequestMapping("user")
 public class UserController {

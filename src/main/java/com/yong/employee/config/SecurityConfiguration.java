@@ -40,7 +40,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         //配置白名单
         String[] urls = {
                 "/user/login",
-                "doc.html",
+                "/swagger-ui.html",
+                "/doc.html",
                 "/**/*.js",
                 "/**/*.css",
                 "/swagger-resources",

@@ -3,12 +3,14 @@ package com.yong.employee.model.vo;
 import com.yong.employee.base.DeleteGroup;
 import com.yong.employee.base.SaveGroup;
 import com.yong.employee.base.UpdateGroup;
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+@ApiModel(value="员工信息",description="员工信息表单对象")
 @Data
 public class EmployeeVO {
 

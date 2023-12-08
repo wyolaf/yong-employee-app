@@ -17,7 +17,7 @@ import java.util.List;
 
 @ControllerAdvice
 public class ResponseBodyAdvice implements org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice {
-    private static final List<String> IGNORE_URL = Arrays.asList("swagger-resources", "api-docs", "actuator",
+    private static final List<String> IGNORE_URL = Arrays.asList("doc.html", "swagger-resources", "api-docs", "actuator",
             "health", "metrics", "prometheus", "swagger-json");
     private static final String HTTP_STATUS_CODE = "status";
 
