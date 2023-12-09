@@ -7,3 +7,4 @@
 ##### 分页使用的是pagehelper
 ##### 接口校验使用Validate
 ##### swagger访问地址：http://localhost:8086/employee/swagger-ui.html
+##### 试题中的2、3题shell脚本编写上传到了根目录的shell文件夹中
